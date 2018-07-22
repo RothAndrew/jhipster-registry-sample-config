@@ -7,9 +7,13 @@ configserver:
     name: JHipster Registry config server
     status: Connected to the JHipster Registry config server, using https://github.com/RothAndrew/jhipster-registry-sample-config !
 
-# Default JWT secret token (to be changed in production!)
 jhipster:
     security:
         authentication:
             jwt:
-                secret: my-secret-token-to-change-in-production
+                secret: sample-token-to-change-in-production
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://admin:${jhipster.registry.password}@jhipster-registry:8761/eureka/
