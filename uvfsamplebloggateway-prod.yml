@@ -1,3 +1,2 @@
-spring:
-  application:
-    name: testgateway
+application:
+  test: test
